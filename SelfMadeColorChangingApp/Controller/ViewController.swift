@@ -14,15 +14,9 @@ class ViewController: UIViewController {
     
     @IBAction func colorButtonMethod(_ sender: UIButton)
     {
-        if(colorButton.backgroundColor == .green)
-        {
-            colorButton.backgroundColor = .red
-        }
-        else
-        {
-            colorButton.backgroundColor = .green
-        }
+        colorButton.backgroundColor = createRandomColor()  //changees the background of the button to random colors
         view.backgroundColor = createRandomColor()
+        colorButton.setTitleColor(createRandomColor(), for: .normal)
     }
     
     private func createRandomColor() -> UIColor
