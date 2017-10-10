@@ -55,10 +55,8 @@
 			isa = PBXGroup;
 			children = (
 				ACE7F41F1F8D3CCB000AE367 /* Controller */,
-				ACE7F4111F8D3C55000AE367 /* Main.storyboard */,
-				ACE7F4141F8D3C55000AE367 /* Assets.xcassets */,
-				ACE7F4161F8D3C55000AE367 /* LaunchScreen.storyboard */,
-				ACE7F4201F8D3CDB000AE367 /* Settings */,
+				ACE7F4211F8D4E75000AE367 /* View */,
+				ACE7F4221F8D4EA3000AE367 /* Resources */,
 			);
 			path = SelfMadeColorChangingApp;
 			sourceTree = "<group>";
@@ -72,12 +70,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		ACE7F4201F8D3CDB000AE367 /* Settings */ = {
+		ACE7F4211F8D4E75000AE367 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACE7F4111F8D3C55000AE367 /* Main.storyboard */,
+				ACE7F4161F8D3C55000AE367 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACE7F4221F8D4EA3000AE367 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				ACE7F4191F8D3C55000AE367 /* Info.plist */,
+				ACE7F4141F8D3C55000AE367 /* Assets.xcassets */,
 			);
-			path = Settings;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/SelfMadeColorChangingApp/Settings/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SelfMadeColorChangingApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.SelfMadeColorChangingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -305,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/SelfMadeColorChangingApp/Settings/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/SelfMadeColorChangingApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.SelfMadeColorChangingApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
