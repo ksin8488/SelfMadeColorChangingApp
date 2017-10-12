@@ -29,6 +29,28 @@ class ViewController: UIViewController {
         
         return newColor
     }
+//Connected the slider in GUI to be able to chage the background color
+    @IBOutlet weak var colorSlider: UISlider!
+    
+    @IBAction func colorSliderMethod(_ sender: UISlider)
+    {
+        //get's the values for the current background color
+        var currentBackgroundColor : UIColor
+   
+        
+        //creates a variable to hold new color
+        var newBackgroundColor : UIColor
+        
+        //creates variable holding the value from slider
+        let sliderValue = CGFloat(sender.value)
+        
+        //changes the newBackgroundColor variable to new color values
+//        newBackgroundColor = UIColor(hue: sliderValue, saturation: 0.5, brightness: 0.5, alpha: 0.5)
+        newBackgroundColor = UIColor(red: sliderValue, green: sliderValue, blue: sliderValue, alpha: CGFloat(1))
+        
+        //changest the background color
+        self.view.backgroundColor = newBackgroundColor
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
