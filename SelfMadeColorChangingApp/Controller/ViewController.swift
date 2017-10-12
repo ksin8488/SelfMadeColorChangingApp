@@ -33,27 +33,20 @@ extension UIColor
         }
     }
 }
+
 class ViewController: UIViewController {
 
+    private lazy var colorTool : ColorTools = ColorTools() //lazy is memory management that means make me when you need to
     @IBOutlet weak var colorButton: UIButton!
     
     @IBAction func colorButtonMethod(_ sender: UIButton)
     {
-        colorButton.backgroundColor = createRandomColor()  //changees the background of the button to random colors
-        view.backgroundColor = createRandomColor()
-        colorButton.setTitleColor(createRandomColor(), for: .normal)
+        colorButton.backgroundColor = colorTool.createRandomColor()  //changees the background of the button to random colors
+        view.backgroundColor = colorTool.createRandomColor()
+        colorButton.setTitleColor(colorTool.createRandomColor(), for: .normal)
     }
     
-    private func createRandomColor() -> UIColor
-    {
-        let newColor :UIColor
-        let redValue :CGFloat = CGFloat (Double (arc4random_uniform(256)) / 255.00)
-        let greenValue :CGFloat = CGFloat (Double (arc4random() % 256) / 255.00)
-        let blueValue :CGFloat = CGFloat (drand48())
-        newColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: CGFloat(1))
-        
-        return newColor
-    }
+    
 //Connected the slider in GUI to be able to chage the background color
     @IBOutlet weak var colorSlider: UISlider!
     

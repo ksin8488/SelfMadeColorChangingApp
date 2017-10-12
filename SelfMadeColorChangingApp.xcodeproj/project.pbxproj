@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ACB0D2001F8FF58100EC6114 /* SecondScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0D1FF1F8FF58100EC6114 /* SecondScreenController.swift */; };
+		ACB0D2091F8FFA3B00EC6114 /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0D2081F8FFA3B00EC6114 /* ColorTools.swift */; };
 		ACE7F40E1F8D3C55000AE367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7F40D1F8D3C55000AE367 /* AppDelegate.swift */; };
 		ACE7F4101F8D3C55000AE367 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7F40F1F8D3C55000AE367 /* ViewController.swift */; };
 		ACE7F4131F8D3C55000AE367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE7F4111F8D3C55000AE367 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		ACB0D1FF1F8FF58100EC6114 /* SecondScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenController.swift; sourceTree = "<group>"; };
+		ACB0D2081F8FFA3B00EC6114 /* ColorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTools.swift; sourceTree = "<group>"; };
 		ACE7F40A1F8D3C55000AE367 /* SelfMadeColorChangingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfMadeColorChangingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE7F40D1F8D3C55000AE367 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACE7F40F1F8D3C55000AE367 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACB0D2071F8FFA1700EC6114 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACB0D2081F8FFA3B00EC6114 /* ColorTools.swift */,
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		ACE7F4011F8D3C55000AE367 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +67,7 @@
 		ACE7F40C1F8D3C55000AE367 /* SelfMadeColorChangingApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACB0D2071F8FFA1700EC6114 /* Model */,
 				ACE7F41F1F8D3CCB000AE367 /* Controller */,
 				ACE7F4211F8D4E75000AE367 /* View */,
 				ACE7F4221F8D4EA3000AE367 /* Resources */,
@@ -166,6 +178,7 @@
 				ACE7F4101F8D3C55000AE367 /* ViewController.swift in Sources */,
 				ACE7F40E1F8D3C55000AE367 /* AppDelegate.swift in Sources */,
 				ACB0D2001F8FF58100EC6114 /* SecondScreenController.swift in Sources */,
+				ACB0D2091F8FFA3B00EC6114 /* ColorTools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
