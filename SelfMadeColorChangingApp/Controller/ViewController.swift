@@ -8,6 +8,31 @@
 
 import UIKit
 
+//Creates a function using UIcolor to get the RGB values for the current background color
+extension UIColor
+{
+    func rgb() -> (red:Int, green:Int, blue:Int, alpha:Int)?
+    {
+        var fRed : CGFloat = 0
+        var fGreen : CGFloat = 0
+        var fBlue : CGFloat = 0
+        var fAlpha : CGFloat = 0
+        if self.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha)
+        {
+            let iRed = Int(fRed * 255.0)
+            let iGreen = Int(fGreen * 255.0)
+            let iBlue = Int(fBlue * 255.0)
+            let iAlpha = Int(fAlpha * 255.0)
+            
+            return (red:iRed, green:iGreen, blue:iBlue, alpha:iAlpha)
+        }
+        else
+        {
+            //could not extract RGBA components:
+            return nil
+        }
+    }
+}
 class ViewController: UIViewController {
 
     @IBOutlet weak var colorButton: UIButton!
@@ -34,22 +59,12 @@ class ViewController: UIViewController {
     
     @IBAction func colorSliderMethod(_ sender: UISlider)
     {
-        //get's the values for the current background color
-        var currentBackgroundColor : UIColor
-   
+        view.backgroundColor = view.backgroundColor?.withAlphaComponent(CGFloat (colorSlider.value))    //Code made by Derek Vawdrey
         
-        //creates a variable to hold new color
-        var newBackgroundColor : UIColor
+        //Function to get's the RBB values for the current background
+    
+ //How to get a return for the current background color - UIColor(red:1,green:4,blue:0,alpha:1).rgb()?.redGreenOrBlueName
         
-        //creates variable holding the value from slider
-        let sliderValue = CGFloat(sender.value)
-        
-        //changes the newBackgroundColor variable to new color values
-//        newBackgroundColor = UIColor(hue: sliderValue, saturation: 0.5, brightness: 0.5, alpha: 0.5)
-        newBackgroundColor = UIColor(red: sliderValue, green: sliderValue, blue: sliderValue, alpha: CGFloat(1))
-        
-        //changest the background color
-        self.view.backgroundColor = newBackgroundColor
     }
     
     override func viewDidLoad() {
