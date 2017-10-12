@@ -11,5 +11,11 @@ import Foundation
 
 public class SecondScreenController : UIViewController
 {
-    
+    private lazy var color: ColorTools = ColorTools() //formal way
+
+    public override func viewDidLoad()
+    {
+        super.viewDidLoad() //automatically gets called as soon as you go to this screen
+        view.backgroundColor = color.createRandomColor()
+    }
 }

@@ -25,7 +25,6 @@
                                 </state>
                                 <connections>
                                     <action selector="colorButtonMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wIt-ST-of3"/>
-                                    <segue destination="DbM-gz-wXn" kind="show" id="aI1-Q7-WQ5"/>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7DW-ZJ-Z2H">
@@ -82,7 +81,4 @@
             <point key="canvasLocation" x="1094" y="118"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="aI1-Q7-WQ5"/>
-    </inferredMetricsTieBreakers>
 </document>
