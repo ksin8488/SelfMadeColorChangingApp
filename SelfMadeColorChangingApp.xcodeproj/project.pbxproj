@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC6BD33E1F953ADD0052923B /* ThirdScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6BD33D1F953ADD0052923B /* ThirdScreenController.swift */; };
+		AC9A68071F97C80800C711DE /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9A68061F97C80800C711DE /* MediaController.swift */; };
 		ACB0D2001F8FF58100EC6114 /* SecondScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0D1FF1F8FF58100EC6114 /* SecondScreenController.swift */; };
 		ACB0D20B1F8FFFA600EC6114 /* ColorTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB0D20A1F8FFFA600EC6114 /* ColorTools.swift */; };
 		ACE7F40E1F8D3C55000AE367 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7F40D1F8D3C55000AE367 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		AC6BD33D1F953ADD0052923B /* ThirdScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenController.swift; sourceTree = "<group>"; };
+		AC9A68061F97C80800C711DE /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
 		ACB0D1FF1F8FF58100EC6114 /* SecondScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenController.swift; sourceTree = "<group>"; };
 		ACB0D20A1F8FFFA600EC6114 /* ColorTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ColorTools.swift; path = SelfMadeColorChangingApp/Model/ColorTools.swift; sourceTree = SOURCE_ROOT; };
 		ACE7F40A1F8D3C55000AE367 /* SelfMadeColorChangingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SelfMadeColorChangingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,7 @@
 				ACE7F40F1F8D3C55000AE367 /* ViewController.swift */,
 				ACB0D1FF1F8FF58100EC6114 /* SecondScreenController.swift */,
 				AC6BD33D1F953ADD0052923B /* ThirdScreenController.swift */,
+				AC9A68061F97C80800C711DE /* MediaController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9A68071F97C80800C711DE /* MediaController.swift in Sources */,
 				ACE7F4101F8D3C55000AE367 /* ViewController.swift in Sources */,
 				ACE7F40E1F8D3C55000AE367 /* AppDelegate.swift in Sources */,
 				ACB0D2001F8FF58100EC6114 /* SecondScreenController.swift in Sources */,
