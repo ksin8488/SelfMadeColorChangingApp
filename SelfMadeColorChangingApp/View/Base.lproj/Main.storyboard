@@ -113,31 +113,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umw-xg-1LW">
-                                <rect key="frame" x="131" y="152" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sound Button"/>
-                                <connections>
-                                    <action selector="soundButtonMethod:" destination="sYl-AL-dfo" eventType="touchUpInside" id="hiQ-kr-gVI"/>
-                                </connections>
-                            </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nJo-dl-yHN">
-                                <rect key="frame" x="119" y="230" width="118" height="30"/>
+                                <rect key="frame" x="129" y="231" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="soundSliderMethod:" destination="sYl-AL-dfo" eventType="valueChanged" id="ybT-Tn-aQu"/>
                                 </connections>
                             </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DWb-Jg-YDw">
-                                <rect key="frame" x="24" y="346" width="320" height="301"/>
+                                <rect key="frame" x="27" y="346" width="320" height="301"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04c-yW-GCZ">
-                                <rect key="frame" x="132" y="291" width="92" height="30"/>
+                                <rect key="frame" x="141" y="291" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Image Button"/>
+                                <state key="normal" title="Image Toggle"/>
                                 <connections>
                                     <action selector="imageButtonMethod:" destination="sYl-AL-dfo" eventType="touchUpInside" id="Xbh-lh-TxM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Umw-xg-1LW">
+                                <rect key="frame" x="141" y="153" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sound On/Off"/>
+                                <connections>
+                                    <action selector="soundButtonMethod:" destination="sYl-AL-dfo" eventType="touchUpInside" id="hiQ-kr-gVI"/>
                                 </connections>
                             </button>
                         </subviews>

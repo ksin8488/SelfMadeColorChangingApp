@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 public class MediaController : UIViewController
 {
     private lazy var color: ColorTools = ColorTools() //formal way
     private var imageCounter : Int = 0
+    private var soundPlayer : AVAudioPlayer?
     
     public override func viewDidLoad()
     {
@@ -31,6 +33,24 @@ public class MediaController : UIViewController
     
     }
     
+    private func loadAudioFile() -> Void
+    {
+        if let soundURL = NSDataAsset(name: "Gisher Music - Big Bad Voodoo Daddy - Jumpin Jack")
+            do
+            {
+                try! AVAudioSession.sharedInstance().setCategory(AVAudiSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
+                soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
+               // Timer.scheduledTimer(timeInteral: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
+            }
+        
+            catch
+            {
+                print("Audio File not Found")
+            }
+    }
     @IBAction func soundSliderMethod(_ sender: UISlider)
     {
         
