@@ -22,6 +22,10 @@ public class MediaController : UIViewController
         view.backgroundColor = color.createRandomColor()
     }
     
+//    public override func didReceiveMemoryWarning()
+//    {
+//        super.didReceiveMemoryWrning()
+//    }
 
     @IBOutlet weak var soundButton: UIButton!
     @IBOutlet weak var soundSlider: UISlider!
@@ -30,31 +34,65 @@ public class MediaController : UIViewController
     
     @IBAction func soundButtonMethod(_ sender: UIButton)
     {
+        playMusicFile()
+        view.backgroundColor = color.createRandomColor()
+    }
     
+    @IBAction func soundSliderMethod(_ sender: UISlider)
+    {
+        let seekTime = Double (soundSlider.value)
+        soundPlayer?.currentTime = seekTime
+    }
+    
+    private func playMusicFile() -> Void
+    {
+        if let isPlaying = soundPlayer?.isPlaying
+        {
+            if(isPlaying)
+            {
+                soundPlayer?.pause()
+            }
+            else
+            {
+                soundPlayer?.play()
+            }
+        }
+//        if((soundPlayer?.isPlaying)!)         NOT safe code
+//        {
+//            soundPlayer?.pause()
+//        }
+//        else
+//        {
+//            soundPlayer?.play()
+//        }
     }
     
     private func loadAudioFile() -> Void
     {
-        if let soundURL = NSDataAsset(name: "Gisher Music - Big Bad Voodoo Daddy - Jumpin Jack")
+        if let soundURL = NSDataAsset (name: "Gisher Music - Big Bad Voodoo Daddy - Jumpin Jack")
+        {
             do
             {
-                try! AVAudioSession.sharedInstance().setCategory(AVAudiSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
                 try! AVAudioSession.sharedInstance().setActive(true)
                 
                 try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
                 soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
-               // Timer.scheduledTimer(timeInteral: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
+               Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
             }
-        
             catch
             {
                 print("Audio File not Found")
             }
+        }
     }
-    @IBAction func soundSliderMethod(_ sender: UISlider)
+    
+    @objc private func updateSlider() -> Void
     {
-        
+        soundSlider.value = Float ((soundPlayer?.currentTime)!)
     }
+    
+
     
     @IBAction func imageButtonMethod(_ sender: UIButton)
     {
