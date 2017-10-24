@@ -20,6 +20,7 @@ public class MediaController : UIViewController
     {
         super.viewDidLoad() //automatically gets called as soon as you go to this screen
         view.backgroundColor = color.createRandomColor()
+        loadAudioFile()
     }
     
 //    public override func didReceiveMemoryWarning()
@@ -69,7 +70,7 @@ public class MediaController : UIViewController
     
     private func loadAudioFile() -> Void
     {
-        if let soundURL = NSDataAsset (name: "Gisher Music - Big Bad Voodoo Daddy - Jumpin Jack")
+        if let soundURL = NSDataAsset (name: "bigBadVoodooDaddy")   //"Gisher Music - Big Bad Voodoo Daddy - Jumpin Jack"
         {
             do
             {
